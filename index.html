@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BRAXXON – Premium Verpackungen</title>
+    <meta name="description" content="BRAXXON – Luxuriöse Verpackungen: Pizzakartons, Dönerpapier, Burgerboxen. Schweizweit. DE/EN/IT/FR." />
+    <meta name="theme-color" content="#3b2f2f" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%233b2f2f'/%3E%3Ctext x='50' y='58' font-size='54' text-anchor='middle' fill='%23ffcc00' font-family='Arial'%3EB%3C/text%3E%3C/svg%3E" />
+
+    <!-- Tailwind (CDN for one-file demo). For production, use a proper build. -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              braxxon: {
+                brown: '#3b2f2f',
+                brownDark: '#2e2424',
+                yellow: '#ffcc00',
+                cream: '#fff9ed'
+              }
+            },
+            boxShadow: {
+              luxe: '0 10px 30px rgba(0,0,0,0.15)'
+            },
+            fontFamily: {
+              display: ['Poppins', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+              body: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif']
+            }
+          }
+        }
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+      /* Smooth luxury hover */
+      .hover-rise { transition: transform .35s ease, box-shadow .35s ease; }
+      .hover-rise:hover { transform: translateY(-4px); box-shadow: 0 16px 30px rgba(0,0,0,.18) }
+      /* Gold underline */
+      .gold-underline { position: relative; display: inline-block; }
+      .gold-underline::after { content: ''; position: absolute; left: 0; bottom: -6px; width: 100%; height: 3px; background: linear-gradient(90deg,#ffcc00,#ffe27a); border-radius: 999px; }
+    </style>
+  </head>
+  <body class="bg-braxxon-cream text-braxxon-brown font-body">
+    <!-- Top Bar -->
+    <div class="w-full bg-braxxon-brown text-white text-sm">
+      <div class="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
+        <div class="flex items-center gap-4">
+          <span id="topbar-slogan" class="opacity-90"></span>
+        </div>
+        <div class="flex items-center gap-3">
+          <button class="px-2 py-1 rounded hover:bg-white/10" data-lang="de">DE</button>
+          <button class="px-2 py-1 rounded hover:bg-white/10" data-lang="en">EN</button>
+          <button class="px-2 py-1 rounded hover:bg-white/10" data-lang="it">IT</button>
+          <button class="px-2 py-1 rounded hover:bg-white/10" data-lang="fr">FR</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Header / Nav -->
+    <header class="sticky top-0 z-40 backdrop-blur bg-white/80 border-b border-braxxon-brown/10">
+      <nav class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <!-- Inline fallback logo; replace with real PNG when available -->
+          <div class="w-10 h-10 grid place-items-center rounded-full bg-braxxon-brown text-braxxon-yellow font-display text-xl select-none">B</div>
+          <div>
+            <div class="font-display text-xl tracking-wide text-braxxon-brown">BRAXXON</div>
+            <div id="nav-tagline" class="text-xs text-braxxon-brown/70">We Don’t Pack. We Dominate.</div>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center gap-8 text-braxxon-brown font-medium">
+          <a href="#products" class="hover:text-braxxon-yellow transition" data-i18n="nav_products"></a>
+          <a href="#about" class="hover:text-braxxon-yellow transition" data-i18n="nav_about"></a>
+          <a href="#contact" class="hover:text-braxxon-yellow transition" data-i18n="nav_contact"></a>
+        </div>
+        <a href="#contact" class="ml-6 inline-block px-4 py-2 rounded-2xl bg-braxxon-yellow text-braxxon-brown font-semibold shadow hover-rise" data-i18n="cta_quote"></a>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="relative overflow-hidden">
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(255,204,0,0.15),transparent_50%),radial-gradient(ellipse_at_bottom_right,rgba(59,47,47,0.15),transparent_50%)]"></div>
+      <div class="max-w-7xl mx-auto px-4 py-20 lg:py-28 relative">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h1 class="font-display text-4xl lg:text-5xl leading-tight text-braxxon-brown">
+              <span class="gold-underline" data-i18n="hero_title_1"></span>
+              <br />
+              <span data-i18n="hero_title_2"></span>
+            </h1>
+            <p class="mt-6 text-braxxon-brown/80 text-lg" data-i18n="hero_sub"></p>
+            <div class="mt-8 flex flex-wrap gap-4">
+              <a href="#products" class="px-5 py-3 rounded-2xl bg-braxxon-brown text-white hover:bg-braxxon-brownDark hover-rise" data-i18n="cta_view_products"></a>
+              <a href="#contact" class="px-5 py-3 rounded-2xl bg-braxxon-yellow text-braxxon-brown font-semibold hover-rise" data-i18n="cta_contact"></a>
+            </div>
+            <div class="mt-6 text-sm text-braxxon-brown/70" data-i18n="hero_note"></div>
+          </div>
+          <div class="relative">
+            <div class="aspect-[4/3] rounded-3xl bg-white shadow-luxe overflow-hidden">
+              <img id="hero-image" alt="BRAXXON packaging collage" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=1600&auto=format&fit=crop" />
+            </div>
+            <div class="absolute -bottom-6 -right-6 bg-white shadow-luxe rounded-2xl p-4 w-[260px]">
+              <div class="text-xs uppercase tracking-wide text-braxxon-brown/70 mb-1" data-i18n="hero_badge_title"></div>
+              <div class="font-semibold text-braxxon-brown" data-i18n="hero_badge_text"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products -->
+    <section id="products" class="py-16 lg:py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex items-end justify-between gap-6 mb-8">
+          <h2 class="font-display text-3xl text-braxxon-brown" data-i18n="products_title"></h2>
+          <div class="text-sm text-braxxon-brown/70" data-i18n="products_sub"></div>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Pizza Box -->
+          <article class="bg-braxxon-cream border border-braxxon-brown/10 rounded-3xl p-5 hover-rise">
+            <img class="rounded-2xl w-full h-48 object-cover mb-4" src="https://images.unsplash.com/photo-1542834369-f10ebf06d3cb?q=80&w=1600&auto=format&fit=crop" alt="Pizzakartons" />
+            <h3 class="font-semibold text-braxxon-brown text-lg" data-i18n="prod_pizza_title"></h3>
+            <p class="text-sm text-braxxon-brown/80 mt-1" data-i18n="prod_pizza_desc"></p>
+            <div class="mt-4 flex items-center justify-between">
+              <span class="font-semibold text-braxxon-brown" data-i18n="prod_from_pizza"></span>
+              <a href="#contact" class="text-braxxon-brown underline underline-offset-4" data-i18n="prod_request_quote"></a>
+            </div>
+          </article>
+          <!-- Doner Paper -->
+          <article class="bg-braxxon-cream border border-braxxon-brown/10 rounded-3xl p-5 hover-rise">
+            <img class="rounded-2xl w-full h-48 object-cover mb-4" src="https://images.unsplash.com/photo-1526312426976-593c64a4c1eb?q=80&w=1600&auto=format&fit=crop" alt="Dönerpapier" />
+            <h3 class="font-semibold text-braxxon-brown text-lg" data-i18n="prod_doner_title"></h3>
+            <p class="text-sm text-braxxon-brown/80 mt-1" data-i18n="prod_doner_desc"></p>
+            <div class="mt-4 flex items-center justify-between">
+              <span class="font-semibold text-braxxon-brown" data-i18n="prod_from_doner"></span>
+              <a href="#contact" class="text-braxxon-brown underline underline-offset-4" data-i18n="prod_request_quote"></a>
+            </div>
+          </article>
+          <!-- Burger Box -->
+          <article class="bg-braxxon-cream border border-braxxon-brown/10 rounded-3xl p-5 hover-rise">
+            <img class="rounded-2xl w-full h-48 object-cover mb-4" src="https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=1600&auto=format&fit=crop" alt="Burgerkartons" />
+            <h3 class="font-semibold text-braxxon-brown text-lg" data-i18n="prod_burger_title"></h3>
+            <p class="text-sm text-braxxon-brown/80 mt-1" data-i18n="prod_burger_desc"></p>
+            <div class="mt-4 flex items-center justify-between">
+              <span class="font-semibold text-braxxon-brown" data-i18n="prod_from_burger"></span>
+              <a href="#contact" class="text-braxxon-brown underline underline-offset-4" data-i18n="prod_request_quote"></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-16 lg:py-20">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="grid lg:grid-cols-2 gap-10 items-center">
+          <div>
+            <h2 class="font-display text-3xl text-braxxon-brown mb-4" data-i18n="about_title"></h2>
+            <p class="text-braxxon-brown/80" data-i18n="about_text"></p>
+            <ul class="mt-6 space-y-2 text-braxxon-brown/90">
+              <li>• ISO & EU Konformität</li>
+              <li>• Schweizer Qualitätskontrolle</li>
+              <li>• Schnelle Lieferung Schweiz & EU</li>
+            </ul>
+          </div>
+          <div class="rounded-3xl overflow-hidden shadow-luxe">
+            <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?q=80&w=1600&auto=format&fit=crop" alt="BRAXXON Qualität" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-16 lg:py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="grid lg:grid-cols-2 gap-10">
+          <div>
+            <h2 class="font-display text-3xl text-braxxon-brown mb-4" data-i18n="contact_title"></h2>
+            <p class="text-braxxon-brown/80 mb-6" data-i18n="contact_sub"></p>
+            <div class="bg-braxxon-cream rounded-3xl p-6 border border-braxxon-brown/10">
+              <div class="font-semibold">BRAXXON</div>
+              <div class="text-sm text-braxxon-brown/80">Schweiz</div>
+              <div class="mt-3 text-sm">
+                <div>Raman Larimi – <a class="underline" href="mailto:raman.larimi@braxxon.ch">raman.larimi@braxxon.ch</a> · <a class="underline" href="tel:+41762838448">+41 76 283 84 48</a></div>
+                <div>Arshia Ghazimoradi – <a class="underline" href="mailto:arshia.ghazimoradi@braxxon.ch">arshia.ghazimoradi@braxxon.ch</a> · <a class="underline" href="tel:+41764580005">+41 76 458 00 05</a></div>
+              </div>
+            </div>
+          </div>
+
+          <form id="quote-form" class="bg-braxxon-cream rounded-3xl p-6 border border-braxxon-brown/10 shadow-sm">
+            <div class="grid md:grid-cols-2 gap-4">
+              <div>
+                <label class="text-sm" data-i18n="form_name"></label>
+                <input required name="name" class="mt-1 w-full px-4 py-3 rounded-2xl border border-braxxon-brown/20 outline-none focus:ring-2 focus:ring-braxxon-yellow" />
+              </div>
+              <div>
+                <label class="text-sm">Email</label>
+                <input required type="email" name="email" class="mt-1 w-full px-4 py-3 rounded-2xl border border-braxxon-brown/20 outline-none focus:ring-2 focus:ring-braxxon-yellow" />
+              </div>
+              <div>
+                <label class="text-sm" data-i18n="form_phone"></label>
+                <input name="phone" class="mt-1 w-full px-4 py-3 rounded-2xl border border-braxxon-brown/20 outline-none focus:ring-2 focus:ring-braxxon-yellow" />
+              </div>
+              <div>
+                <label class="text-sm" data-i18n="form_product"></label>
+                <select name="product" class="mt-1 w-full px-4 py-3 rounded-2xl border border-braxxon-brown/20 outline-none focus:ring-2 focus:ring-braxxon-yellow">
+                  <option value="Pizza Box">Pizza Box</option>
+                  <option value="Dönerpapier">Dönerpapier</option>
+                  <option value="Burgerbox">Burgerbox</option>
+                  <option value="Custom">Custom</option>
+                </select>
+              </div>
+              <div class="md:col-span-2">
+                <label class="text-sm" data-i18n="form_message"></label>
+                <textarea name="message" rows="4" class="mt-1 w-full px-4 py-3 rounded-2xl border border-braxxon-brown/20 outline-none focus:ring-2 focus:ring-braxxon-yellow"></textarea>
+              </div>
+            </div>
+            <div class="mt-5 flex items-center gap-3">
+              <button type="submit" class="px-6 py-3 rounded-2xl bg-braxxon-brown text-white font-semibold hover:bg-braxxon-brownDark hover-rise" data-i18n="form_send"></button>
+              <div class="text-sm text-braxxon-brown/70" data-i18n="form_note"></div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-braxxon-brown/10">
+      <div class="max-w-7xl mx-auto px-4 py-8 text-sm text-braxxon-brown/70 flex flex-col md:flex-row items-center justify-between gap-3">
+        <div>© <span id="year"></span> BRAXXON. <span data-i18n="footer_rights"></span></div>
+        <div class="flex items-center gap-4">
+          <a href="#" class="hover:text-braxxon-brown" data-i18n="footer_terms"></a>
+          <a href="#" class="hover:text-braxxon-brown" data-i18n="footer_privacy"></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- i18n & behavior -->
+    <script>
+      const DICT = {
+        de: {
+          topbar_slogan: 'Luxuriöse Verpackungen für die Gastronomie',
+          nav_products: 'Produkte',
+          nav_about: 'Über uns',
+          nav_contact: 'Kontakt',
+          cta_quote: 'Offerte anfragen',
+          hero_title_1: 'Luxus-Verpackungen',
+          hero_title_2: 'für Pizza, Burger & Döner',
+          hero_sub: 'BRAXXON liefert Premium-Verpackungen – starkes Branding, zuverlässige Qualität, faire Preise.',
+          cta_view_products: 'Produkte ansehen',
+          cta_contact: 'Kontakt aufnehmen',
+          hero_note: 'Farben: Braun · Weiß · Gelb · Inkl. Logo-Integration',
+          hero_badge_title: 'Kontakt',
+          hero_badge_text: 'Raman +41 76 283 84 48 · Arshia +41 76 458 00 05',
+          products_title: 'Unsere Produkte',
+          products_sub: 'Fotos sind Platzhalter – echte Produktbilder können jederzeit ersetzt werden.',
+          prod_pizza_title: 'Pizzakartons',
+          prod_pizza_desc: 'Stabile, fettresistente Kartons in diversen Größen · individuelles Branding möglich.',
+          prod_from_pizza: 'ab CHF 0.38/Stk*',
+          prod_doner_title: 'Dönerpapier',
+          prod_doner_desc: 'Hitzebeständig & fettabweisend · Rollen & Zuschnitte · Druck in Farbe.',
+          prod_from_doner: 'ab CHF 0.012/Stk*',
+          prod_burger_title: 'Burgerboxen',
+          prod_burger_desc: 'Hochwertige Faserstoffe, lebensmittelecht · optional mit Fenster.',
+          prod_from_burger: 'ab CHF 0.29/Stk*',
+          prod_request_quote: 'Offerte',
+          about_title: 'Schweizer Anspruch. Internationale Supply Chain.',
+          about_text: 'Wir kombinieren Schweizer Qualitätskontrolle mit effizienten Lieferwegen (u. a. via Türkei → Schweiz). Dadurch sichern wir Top-Qualität, verlässliche Lieferzeiten und attraktive Preise.',
+          contact_title: 'Anfrage & Kontakt',
+          contact_sub: 'Schreiben Sie uns – wir melden uns schnell mit einer individuellen Offerte.',
+          form_name: 'Name',
+          form_phone: 'Telefon',
+          form_product: 'Produkt',
+          form_message: 'Nachricht',
+          form_send: 'Senden',
+          form_note: 'Ihre Anfrage öffnet eine neue Bestätigungsseite.',
+          footer_rights: 'Alle Rechte vorbehalten.',
+          footer_terms: 'AGB',
+          footer_privacy: 'Datenschutz'
+        },
+        en: {
+          topbar_slogan: 'Luxury packaging for food service',
+          nav_products: 'Products', nav_about: 'About', nav_contact: 'Contact', cta_quote: 'Request a quote',
+          hero_title_1: 'Luxury Packaging', hero_title_2: 'for Pizza, Burgers & Döner',
+          hero_sub: 'BRAXXON supplies premium packaging — bold branding, reliable quality, fair prices.',
+          cta_view_products: 'View products', cta_contact: 'Contact us', hero_note: 'Colors: Brown · White · Yellow · Logo included',
+          hero_badge_title: 'Contacts', hero_badge_text: 'Raman +41 76 283 84 48 · Arshia +41 76 458 00 05',
+          products_title: 'Our Products', products_sub: 'Photos are placeholders — swap with your real shots.',
+          prod_pizza_title: 'Pizza Boxes', prod_pizza_desc: 'Rigid, grease‑resistant, custom sizes & branding.', prod_from_pizza: 'from CHF 0.38/pc*',
+          prod_doner_title: 'Döner Paper', prod_doner_desc: 'Heat‑tolerant & grease‑proof · rolls & sheets · color print.', prod_from_doner: 'from CHF 0.012/pc*',
+          prod_burger_title: 'Burger Boxes', prod_burger_desc: 'Food‑safe fibers, premium feel · optional window.', prod_from_burger: 'from CHF 0.29/pc*', prod_request_quote: 'Quote',
+          about_title: 'Swiss Standards. Global Supply Chain.',
+          about_text: 'Swiss QC paired with efficient routes (e.g. Turkey → Switzerland) delivers quality, reliability and sharp pricing.',
+          contact_title: 'Enquiries & Contact', contact_sub: 'Send your request — we reply quickly with a tailored quote.',
+          form_name: 'Name', form_phone: 'Phone', form_product: 'Product', form_message: 'Message', form_send: 'Send', form_note: 'Your request opens a confirmation page.',
+          footer_rights: 'All rights reserved.', footer_terms: 'Terms', footer_privacy: 'Privacy'
+        },
+        it: {
+          topbar_slogan: 'Packaging di lusso per la ristorazione',
+          nav_products: 'Prodotti', nav_about: 'Chi siamo', nav_contact: 'Contatto', cta_quote: 'Richiedi un preventivo',
+          hero_title_1: 'Packaging di Lusso', hero_title_2: 'per Pizza, Burger e Döner',
+          hero_sub: 'BRAXXON fornisce imballaggi premium — branding forte, qualità affidabile, prezzi equi.',
+          cta_view_products: 'Vedi prodotti', cta_contact: 'Contattaci', hero_note: 'Colori: Marrone · Bianco · Giallo · Logo incluso',
+          hero_badge_title: 'Contatti', hero_badge_text: 'Raman +41 76 283 84 48 · Arshia +41 76 458 00 05',
+          products_title: 'I nostri prodotti', products_sub: 'Le foto sono segnaposto — sostituiscile con le tue.',
+          prod_pizza_title: 'Scatole Pizza', prod_pizza_desc: 'Rigide, anti‑grasso, branding personalizzato.', prod_from_pizza: 'da CHF 0.38/pezzo*',
+          prod_doner_title: 'Carta Döner', prod_doner_desc: 'Resistente al calore e al grasso · rotoli e fogli · stampa a colori.', prod_from_doner: 'da CHF 0.012/pezzo*',
+          prod_burger_title: 'Scatole Burger', prod_burger_desc: 'Fibre idonee al contatto alimentare · opzione finestra.', prod_from_burger: 'da CHF 0.29/pezzo*', prod_request_quote: 'Preventivo',
+          about_title: 'Standard svizzeri. Supply chain globale.',
+          about_text: 'Controllo qualità svizzero e rotte efficienti (p.es. Turchia → Svizzera) per qualità, affidabilità e buon prezzo.',
+          contact_title: 'Richieste & Contatto', contact_sub: 'Inviaci la tua richiesta — risposta rapida con preventivo su misura.',
+          form_name: 'Nome', form_phone: 'Telefono', form_product: 'Prodotto', form_message: 'Messaggio', form_send: 'Invia', form_note: 'La richiesta si apre in una nuova pagina di conferma.',
+          footer_rights: 'Tutti i diritti riservati.', footer_terms: 'Termini', footer_privacy: 'Privacy'
+        },
+        fr: {
+          topbar_slogan: 'Emballages de luxe pour la restauration',
+          nav_products: 'Produits', nav_about: 'À propos', nav_contact: 'Contact', cta_quote: 'Demander une offre',
+          hero_title_1: 'Emballages de Luxe', hero_title_2: 'pour Pizza, Burger & Döner',
+          hero_sub: 'BRAXXON fournit des emballages premium — branding fort, qualité fiable, prix justes.',
+          cta_view_products: 'Voir les produits', cta_contact: 'Nous contacter', hero_note: 'Couleurs : brun · blanc · jaune · logo inclus',
+          hero_badge_title: 'Contacts', hero_badge_text: 'Raman +41 76 283 84 48 · Arshia +41 76 458 00 05',
+          products_title: 'Nos produits', products_sub: 'Photos fictives — remplacez par vos images réelles.',
+          prod_pizza_title: 'Boîtes à pizza', prod_pizza_desc: 'Rigides et résistantes à la graisse · tailles et marquage sur mesure.', prod_from_pizza: 'dès CHF 0.38/pièce*',
+          prod_doner_title: 'Papier Döner', prod_doner_desc: 'Résistant à la chaleur et à la graisse · rouleaux & feuilles · impression couleur.', prod_from_doner: 'dès CHF 0.012/pièce*',
+          prod_burger_title: 'Boîtes burger', prod_burger_desc: 'Fibres alimentaires premium · option fenêtre.', prod_from_burger: 'dès CHF 0.29/pièce*', prod_request_quote: 'Offre',
+          about_title: 'Exigence suisse. Chaîne logistique globale.',
+          about_text: 'QC suisse et routes efficaces (p.ex. Turquie → Suisse) : qualité, fiabilité et prix attractifs.',
+          contact_title: 'Demande & Contact', contact_sub: 'Envoyez votre demande — réponse rapide avec offre personnalisée.',
+          form_name: 'Nom', form_phone: 'Téléphone', form_product: 'Produit', form_message: 'Message', form_send: 'Envoyer', form_note: 'Votre demande s’ouvre sur une nouvelle page de confirmation.',
+          footer_rights: 'Tous droits réservés.', footer_terms: 'Conditions', footer_privacy: 'Confidentialité'
+        }
+      };
+
+      const i18nElems = () => document.querySelectorAll('[data-i18n]');
+      let LANG = 'de';
+
+      function applyI18n() {
+        const dict = DICT[LANG];
+        document.getElementById('topbar-slogan').textContent = dict.topbar_slogan;
+        i18nElems().forEach(el => { el.textContent = dict[el.dataset.i18n] || el.textContent });
+        document.documentElement.lang = LANG;
+      }
+
+      document.addEventListener('click', (e) => {
+        const btn = e.target.closest('[data-lang]');
+        if (btn) { LANG = btn.dataset.lang; applyI18n(); }
+      });
+
+      // Form behavior: open a new confirmation page with summary
+      document.addEventListener('DOMContentLoaded', () => {
+        applyI18n();
+        document.getElementById('year').textContent = new Date().getFullYear();
+        const form = document.getElementById('quote-form');
+        form.addEventListener('submit', (ev) => {
+          ev.preventDefault();
+          const data = Object.fromEntries(new FormData(form).entries());
+
+          // OPTIONAL: EmailJS integration (client-side). Replace with your keys or wire a backend.
+          // emailjs.send('YOUR_SERVICE_ID','YOUR_TEMPLATE_ID', data, 'YOUR_PUBLIC_KEY');
+
+          const dict = DICT[LANG];
+          const summary = `<!doctype html><html lang="${LANG}"><head><meta charset='utf-8'><meta name='viewport' content='width=device-width, initial-scale=1'><title>BRAXXON ✓</title><style>body{font-family:Inter,system-ui; background:#fff9ed; color:#3b2f2f; padding:32px} .card{background:#fff; border:1px solid rgba(59,47,47,.1); border-radius:16px; padding:24px; max-width:720px} .h1{font-size:24px; font-weight:700} .mono{font-family:ui-monospace,Menlo,monospace; background:#fff9ed; padding:4px 8px; border-radius:8px}</style></head><body><div class='card'><div class='h1'>BRAXXON — ${dict.contact_title}</div><p>${dict.contact_sub}</p><hr><p><strong>${dict.form_name}:</strong> <span class='mono'>${data.name||''}</span></p><p><strong>Email:</strong> <span class='mono'>${data.email||''}</span></p><p><strong>${dict.form_phone}:</strong> <span class='mono'>${data.phone||''}</span></p><p><strong>${dict.form_product}:</strong> <span class='mono'>${data.product||''}</span></p><p><strong>${dict.form_message}:</strong><br><pre style='white-space:pre-wrap'>${(data.message||'').replace(/[<>]/g,'')}</pre></p><p>Wir melden uns bald. <br>Raman: <a href='mailto:raman.larimi@braxxon.ch'>raman.larimi@braxxon.ch</a> · Arshia: <a href='mailto:arshia.ghazimoradi@braxxon.ch'>arshia.ghazimoradi@braxxon.ch</a></p></div></body></html>`;
+
+          const win = window.open('', '_blank');
+          win.document.write(summary);
+          win.document.close();
+          form.reset();
+        });
+      });
+    </script>
+  </body>
+</html>
